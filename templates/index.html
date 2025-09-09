@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система аудиособеседования</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Система аудиособеседования</h1>
+        
+        <div id="code-input-section" class="section active">
+            <p class="small-text0">Введите код доступа для начала собеседования:</p>
+            <p class="small-text">(Каждый код можно использовать только один раз)</p>
+            <input type="text" id="access-code" placeholder="Введите код" maxlength="6">
+            <button id="submit-code-btn" class="btn">Проверить код</button>
+            <div id="code-result"></div>
+        </div>
+        
+        <div id="mic-test-section" class="section hidden">
+            <p class="small-text1">Нажмите кнопку ниже, чтобы проверить работу микрофона:</p>
+            <button id="test-mic-btn" class="btn">Проверить микрофон</button>
+            
+            <div id="mic-testing" class="hidden">
+                <p>Говорите сейчас... Идет проверка микрофона</p>
+                <div class="visualization">
+                    <div class="visualizer-container">
+                        <div id="mic-visualizer" class="visualizer-bar"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="mic-test-result" class="hidden">
+                <p>Вы сказали: <span id="test-transcript"></span></p>
+                <audio id="playback-audio" controls></audio>
+                <button id="confirm-mic-btn" class="btn">Микрофон работает</button>
+                <button id="retry-mic-btn" class="btn secondary">Попробовать снова</button>
+            </div>
+        </div>
+        
+        <div id="recording-section" class="section hidden">
+            <!-- УДАЛИТЬ ЭТОТ БЛОК -->
+            <!-- <div id="progress-info">
+                <p>Обработка сообщений...</p>
+            </div> -->
+            
+            <button id="start-recording-btn" class="btn large-btn">Начать собеседование</button>
+            
+            <div id="audio-playback-section" class="hidden">
+                <audio id="main-audio" controls>
+                    Ваш браузер не поддерживает аудио элементы.
+                </audio>
+            </div>
+            
+            <div id="recording-controls" class="hidden">
+                <p id="recording-status">Идет запись ответа...</p>
+                <div class="visualization">
+                    <div class="visualizer-container">
+                        <div id="recording-visualizer" class="visualizer-bar"></div>
+                    </div>
+                </div>
+                <button id="stop-recording-btn" class="btn">Завершить запись</button>
+                <div id="recording-result"></div>
+            </div>
+        </div>
+        
+        <div id="completion-section" class="section hidden">
+            <h2>Спасибо за разговор!</h2>
+            <p>Все ваши ответы сохранены</p>
+        </div>
+        
+        <div id="already-completed-section" class="section hidden">
+            <h2>Вы уже прошли собеседование</h2>
+            <p class="small-text">Данный код доступа уже был использован</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

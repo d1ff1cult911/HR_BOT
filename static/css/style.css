@@ -1,0 +1,233 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #333;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgb(128, 128, 128);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.btn {
+    background-color: #219a52;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block; /* Делаем блочным элементом */
+    margin-left: auto; /* Автоматические отступы */
+    margin-right: auto; /* Автоматические отступы */
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn.secondary {
+    background-color: #95a5a6;
+}
+
+.btn.secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+audio {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#recording-result, #code-result {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+#progress-info {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#completion-section, #already-completed-section {
+    text-align: center;
+    
+}
+
+#completion-section {
+    background-color: #219a52;
+}
+
+#already-completed-section {
+    background-color: #c73131;
+    border-color: #f5c6cb;
+}
+
+#mic-testing {
+    margin: 15px 0;
+    text-align: center;
+}
+
+#mic-testing p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#start-recording-btn {
+    font-size: 24px; /* Увеличиваем шрифт в 1.5 раза */
+    padding: 20px 30px; /* Увеличиваем отступы в 2 раза */
+    width: 100%; /* Занимает всю ширину */
+    height: 80px; /* Высота в 4 раза больше обычной кнопки */
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Дополнительно можно сделать кнопку еще более заметной */
+#start-recording-btn {
+    background-color: #27ae60; /* Зеленый цвет */
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#start-recording-btn:hover {
+    background-color: #219a52;
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.visualization {
+    margin: 20px 0;
+}
+
+.visualizer-container {
+    width: 100%;
+    height: 30px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.visualizer-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #ff0000; /* Монотонный красный цвет */
+    border-radius: 15px;
+    transition: width 0.1s ease;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.visualizer-bar.active {
+    animation: pulse 0.5s infinite;
+}
+
+.error-message {
+    color: #ff5722;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.small-text {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.small-text0 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.small-text1 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
